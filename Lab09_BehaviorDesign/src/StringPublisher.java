@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import java.util.concurrent.Flow.Publisher;
 import java.util.concurrent.Flow.Subscriber;
@@ -20,7 +19,6 @@ public class StringPublisher implements Publisher<String> {
                 allMatches += matcher.group();
             }
             if (!allMatches.equals("")) {
-                System.out.println("[StringPublisher]: publish \"" + allMatches + "\" to " + subscription.getClass());
                 subscription.onNext(allMatches);
             }
         }

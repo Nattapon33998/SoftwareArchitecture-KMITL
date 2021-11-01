@@ -18,6 +18,9 @@ public class Main {
         while (true) {
             System.out.print("Enter text: ");
             s = scanner.nextLine();
+            if (s.equals("exit")) {
+                break;
+            }
             publisher.publish(s);
         }
     }
